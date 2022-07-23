@@ -3,6 +3,8 @@
 */
 
 const permutation = (str1, str2) => {
+  if (str1.length > str2.length || str2.length > str2.length) return false;
+
   const map1 = {};
   const map2 = {};
 
@@ -25,7 +27,6 @@ const permutation = (str1, str2) => {
     }
   }
 
-  if(Object.keys(map1).length > Object.keys(map2).length || Object.keys(map2).length > Object.keys(map1).length) return false;
 
   for (let char in map1) {
     if (map1[char] - map2[char] != 0) {
@@ -37,7 +38,7 @@ const permutation = (str1, str2) => {
 
 }
 
-console.log(permutation("hello world", "world hellossss"));
+console.log(permutation("hello world", "world hello"));
 
 
 /*
