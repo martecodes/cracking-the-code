@@ -24,7 +24,4 @@ console.log(unique("world"));
   "hello" -> false
   "world" -> true
 
-  "hello"
-      ^
-
 */
